@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    font-family: "Comfortaa",cursive;
+    color: rgb(49, 51, 68);
+    overflow-x: hidden;
+}
+.flex-align-center{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.h62px{
+    height: 62px;
+}
+
+header{
+    padding: 10px 125px;
+    box-sizing: border-box;
+    background-color: white;
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.head{
+    justify-content: space-between;
+}
+.city > img{
+    padding-right: 20px;
+}
+.city > h1{
+    padding-right: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.125;
+}
+
+.lang > span{
+    font-size: 14px;
+    color: rgb(255, 205, 2);
+    font-weight: bold;
+    line-height: 2.286;
+    padding-right: 5px;
+}
+.lang > button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    padding-right: 60px;
+}
+
+.weather > img{
+    padding-right: 10px;
+}
+.weather .temp {
+    font-size: 24px;
+    line-height: 1.333;
+    padding-right: 10px;
+}
+.weather .situation{
+    font-size: 14px;
+    line-height: 2.286;
+    padding-right: 20px;
+}
+.weather .baseline{
+    display: flex;
+    align-items: baseline;
+}
+
+.header-menu > .firstTimeTernopil{
+    border-radius: 4px;
+    background-color: rgb(255, 205, 2);
+    box-shadow: 0 0 12px 0 rgba(238, 190, 0, 0.3);
+    border:none;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 2.286;
+    text-align: center;
+    padding: 10px;
+    margin-right: 20px;
+}
+.menu a{
+    text-shadow: #adadb4 0 0 2px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: rgb(49, 51, 68);
+}
+.dropdown > .btn{
+    background-color: white;
+}
+
+.map-block{
+    position: relative;
+}
+.map{
+    width: 100%;
+}
+.comment{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    background-color: rgb(255, 205, 2);
+    border: 25px solid rgba(255, 205, 2 , 0.2);
+}
+
+.info{
+    padding: 100px 125px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    background-color: rgb(246, 248, 249);
+    display: flex;
+    justify-content: space-around;
+}
+.info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.188;
+}
+
+.writeToUs{
+    display: flex;
+    justify-content: center;
+}
+.writeToUs .form {
+    background-color: rgb(230, 237, 241);
+    padding: 100px;
+}
+.form h2 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+.form label {
+    font-size: 16px;
+    line-height: 1.813;
+}
+#name, #phone{
+    width: 90%;
+}
+.form input,.form textarea{
+    -webkit-appearance: none;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 55px;
+    padding-left: 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form textarea{
+    height: 100px;
+}
+
+input:focus:invalid {
+    box-shadow: 0 0 5px 1px red;
+    outline: none;
+}
+
+
+.animate {
+    animation-name: block;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+@keyframes block {
+    from {
+        transform: translateY(500%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/* можно подключить библиотеку
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+и для блока с класом animate заменить классы
+на "animated infinite fadeInUp delay-2s"
+ */
+/* Задать блоку с классом  animate position:relative; top:500%;
+    и с помощью javascript через setInterval менять его позицию
+*/
+
+footer {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 200px;
+}
+
+
+
+@media (max-width: 1120px){
+    header{
+        padding: 10px 50px;
+    }
+    .info{
+        padding: 50px 50px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 985px) {
+    header{
+        padding: 10px 30px;
+    }
+    .city > img{
+        padding-right: 10px;
+    }
+    .city > h1 {
+        padding-right: 20px;
+    }
+    .lang > button {
+        padding-right: 20px;
+    }
+}
+@media (max-width: 870px) {
+    .firstTimeTernopil {
+        transform: scale(0.5);
+    }
+    .head{
+        flex-direction: column;
+    }
+    .writeToUs .form {
+       padding: 50px;
+    }
+}
+@media (max-width: 490px) {
+    .info{
+        flex-direction: column;
+    }
+}

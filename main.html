@@ -1,0 +1,123 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacts</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script src="wow.min.js"></script>
+    <script>new WOW().init();</script>
+</head>
+<body>
+    <header>
+        <div class="head flex-align-center">
+            <div class="flex-align-center">
+                <div class="city flex-align-center h62px">
+                    <img src="img/ternopil.png" class="logo" alt="logo ternopil">
+                    <h1>Тернопіль</h1>
+                </div>
+                <div class="lang flex-align-center h62px">
+                    <span>УКР</span>
+                    <button>
+                        <img src="img/arrow.png" alt=" arrow">
+                    </button>
+                </div>
+                <div class="weather flex-align-center h62px">
+                    <img src="img/cloud.png" alt="cloud and sun">
+                    <div class="baseline">
+                        <span class="temp">+24</span>
+                        <span class="situation">ХМАРНО</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header-menu flex-align-center">
+                <button class="firstTimeTernopil">Перший раз у Тернополі?</button>
+                <div class="menu flex-align-center">
+                    <a href="#">МЕНЮ</a>
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="img/menu.png" alt="menu button">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+       <!-- <div id="map" style="height: 800px; width:100%"> </div> -->
+        <div class="map-block">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA_FPuVI9Nde4BQUimA98wxKN7k3QqS-ws&amp;center=49.554354,25.593377&amp;zoom=16&amp;format=png&amp;maptype=roadmap&amp;style=element:geometry%7Ccolor:0xebe3cd&amp;style=element:labels.text.fill%7Ccolor:0x523735&amp;style=element:labels.text.stroke%7Ccolor:0xf5f1e6&amp;style=feature:administrative%7Celement:geometry.stroke%7Ccolor:0xc9b2a6&amp;style=feature:administrative.land_parcel%7Celement:geometry.stroke%7Ccolor:0xdcd2be&amp;style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xae9e90&amp;style=feature:landscape.natural%7Celement:geometry%7Ccolor:0xdfd2ae&amp;style=feature:poi%7Celement:geometry%7Ccolor:0xdfd2ae&amp;style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x93817c&amp;style=feature:poi.park%7Celement:geometry.fill%7Ccolor:0xbbd573&amp;style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x447530&amp;style=feature:road%7Celement:geometry%7Ccolor:0xf5f1e6&amp;style=feature:road.arterial%7Celement:geometry%7Ccolor:0xfdfcf8&amp;style=feature:road.highway%7Celement:geometry%7Ccolor:0xf8c967&amp;style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0xe9bc62&amp;style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0xe98d58&amp;style=feature:road.highway.controlled_access%7Celement:geometry.stroke%7Ccolor:0xdb8555&amp;style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x806b63&amp;style=feature:transit.line%7Celement:geometry%7Ccolor:0xdfd2ae&amp;style=feature:transit.line%7Celement:labels.text.fill%7Ccolor:0x8f7d77&amp;style=feature:transit.line%7Celement:labels.text.stroke%7Ccolor:0xebe3cd&amp;style=feature:transit.station%7Celement:geometry%7Ccolor:0xdfd2ae&amp;style=feature:water%7Celement:geometry.fill%7Ccolor:0x9dddfb&amp;style=feature:water%7Celement:labels.text.fill%7Ccolor:0x92998d&amp;size=480x360" alt="map" class="map">
+            <button class="comment">
+                    <img src="img/comment.png" alt="">
+            </button>
+
+        </div>
+        <div class="wow fadeInUp delay-2s" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="info">
+                <div class="address">
+                    <h3>
+                        Туристический информационный центр:
+                    </h3>
+                    <p id="informCenter">город Тернополь, 69000<br>проспект Соборный 151<br>mycitytic@gmail.com</p>
+                </div>
+                <div class="phones">
+                    <h3>
+                        Администрация
+                    </h3>
+                    <p id="phones">+380504242054<br>+380617097001<br></p>
+                </div>
+            </div>
+            <div class="writeToUs">
+                <div class="form">
+                    <h2>Напишите нам</h2>
+                    <form action="" name="commentBox" target="#here">
+                        <div>
+                            <label for="name">
+                                <p>Ваше имя</p>
+                                <input type="text" id="name" name="name" required="" pattern="^\pL+\s+\pL+$" minlength="3">
+                            </label>
+                            <label for="phone">
+                                <p>Ваш телефон</p>
+                                <input type="tel" id="phone" name="phone" required="" pattern="\d*" minlength="10" maxlength="10">
+                            </label>
+                        </div>
+                        <label for="email">
+                            <p>Email</p>
+                            <input type="email" id="email" name="email" required="">
+                        </label>
+                        <label for="message">
+                            <p>Сообщение</p>
+                            <textarea id="message" name="message"></textarea>
+                        </label>
+                        <input type="submit" style="position: absolute; left: -9999px">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_FPuVI9Nde4BQUimA98wxKN7k3QqS-ws&callback=initMap"
+            async defer>
+    </script>  -->
+    <script src="script.js"></script>
+
+</body>
+</html>
